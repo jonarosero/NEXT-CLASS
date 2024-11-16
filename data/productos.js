@@ -1,0 +1,13 @@
+/* eslint-disable prettier/prettier */
+const productos = [
+    { id: 1, name: "Camiseta de Algodón", description: "Camiseta de algodón suave, perfecta para el día a día.", price: 20, category: "Ropa", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: 2, name: "Auriculares Bluetooth", description: "Auriculares inalámbricos con cancelación de ruido.", price: 120, category: "Electrónica", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: 3, name: "Zapatillas Deportivas", description: "Zapatillas cómodas y de alto rendimiento para hacer ejercicio.", price: 80, category: "Calzado", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: 4, name: "Smartphone 5G", description: "Teléfono móvil con tecnología 5G, ideal para jugar y trabajar.", price: 500, category: "Electrónica", image: "https://images.unsplash.com/photo-1596742578443-7682ef5251cd?q=80&w=2154&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: 5, name: "Reloj Inteligente", description: "Reloj con monitorización de salud, notificaciones y más.", price: 150, category: "Tecnología", image: "https://images.unsplash.com/photo-1461141346587-763ab02bced9?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: 6, name: "Silla Ergonómica", description: "Silla de oficina ergonómica para mayor comodidad en largas jornadas.", price: 200, category: "Muebles", image: "https://images.unsplash.com/photo-1688578735352-9a6f2ac3b70a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: 7, name: "Lámpara de Escritorio LED", description: "Lámpara ajustable con luz LED para trabajo y lectura.", price: 40, category: "Hogar", image: "https://plus.unsplash.com/premium_photo-1672166939372-5b16118eee45?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: 8, name: "Cafetera Espresso", description: "Cafetera compacta para preparar espresso y café americano.", price: 90, category: "Electrodomésticos", image: "https://images.unsplash.com/photo-1517467139951-f5a925c9f9de?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  ];
+  
+export default productos;
