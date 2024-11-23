@@ -1,14 +1,15 @@
 /* eslint-disable import/order */
 /* eslint-disable prettier/prettier */
 import { useCart } from "@/config/hooks/CarContext";
+import { CartProduct } from "@/data/CartProduct";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@nextui-org/button";
 
 const Carrito = () => {
   const { cart } = useCart();
 
-  const subtotal = cart.reduce(
-    (total, product) => total + product.price * product.quantity,
+  const subtotal: number = cart.reduce(
+    (total: number, product:CartProduct) => total + product.price * product.quantity,
     0
   );
   const IVA = subtotal * 0.15;
@@ -24,13 +25,13 @@ const Carrito = () => {
         ) : (
           <div className="space-y-4">
             <ul className="divide-y divide-gray-200">
-              {cart.map((product) => (
+              {cart.map((product: CartProduct) => (
                 <li
                   key={product.id}
                   className="flex justify-between items-center py-4"
                 >
                   <div>
-                    <h2 className="text-lg font-bold">{product.name}</h2>
+                    <h2 className="text-lg font-bold">{product.title}</h2>
                     <p className="text-sm text-gray-500">
                       Precio Unitario: ${product.price.toFixed(2)}
                     </p>
