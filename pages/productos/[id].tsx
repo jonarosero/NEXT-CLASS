@@ -1,4 +1,7 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react/jsx-sort-props */
+/* eslint-disable import/order */
+/* eslint-disable prettier/prettier */
 import {useRouter} from 'next/router'
 import DefaultLayout from '@/layouts/default'
 import productos from '@/data/productos';
@@ -6,12 +9,15 @@ import { Card, CardBody } from '@nextui-org/card';
 import { Image } from '@nextui-org/image';
 import NextImage from "next/image";
 import { Button } from '@nextui-org/button';
+import { useCart } from '@/config/hooks/CarContext';
 
 
 const ProductoDetalle = () => {
     const router = useRouter();
 
     const {id} = router.query;
+
+    const { addToCart } = useCart()
 
     const producto = productos.find((p)=>p.id===parseInt(id));
 
@@ -20,6 +26,11 @@ const ProductoDetalle = () => {
             <div className='text-center'>Producto no encontrado</div>
         </DefaultLayout>
     }
+
+    const handleAddToCart = () => {
+      addToCart(producto); // Añadir producto al carrito
+      alert("Producto añadido al carrito");
+    };
 
   return (
     <DefaultLayout>
@@ -50,7 +61,7 @@ const ProductoDetalle = () => {
                 <p className="text-small text-foreground/80"> {producto.description}</p>
                 <p className="text-small text-foreground/80 pt-4"><strong>Categoría: </strong>{producto.category}</p>
 
-                <Button className='mt-8' color="secondary" variant="shadow">Añadir al Carrito</Button>
+                <Button className='mt-8' color="secondary" variant="shadow" onPress={handleAddToCart}>Añadir al Carrito</Button>
               </div>
             </div>
           </div>

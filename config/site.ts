@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -11,6 +12,10 @@ export const siteConfig = {
     {
       label: "Productos",
       href: "/productos",
+    },
+    {
+      label: "Crear Productos",
+      href: "/productos/CrearProducto",
     },
   ],
   navMenuItems: [],

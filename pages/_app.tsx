@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import type { AppProps } from "next/app";
 
 import { NextUIProvider } from "@nextui-org/system";
@@ -6,6 +7,7 @@ import { useRouter } from "next/router";
 
 import { fontSans, fontMono } from "@/config/fonts";
 import "@/styles/globals.css";
+import { CartProvider } from "@/config/hooks/CarContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -13,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <NextUIProvider navigate={router.push}>
       <NextThemesProvider>
-        <Component {...pageProps} />
+        <CartProvider>
+          <Component {...pageProps} />
+        </CartProvider>
       </NextThemesProvider>
     </NextUIProvider>
   );
